@@ -3,6 +3,7 @@ package view.interfaces;
 import model.ShapeConfig;
 
 import java.awt.*;
+import controller.Point;
 
 public interface IDrawShapes {
     void paint(Graphics g);
@@ -11,17 +12,17 @@ public interface IDrawShapes {
 
     Point getEndPoint();
 
-    void addX(int x);
+    void addX(int dx);
 
-    void addY(int y);
+    void addY(int dy);
 
-    void setAdjustedStart(Point adjustedStart);
+    void setAdjustedStartPoint(Point startPoint);
 
-    void setAdjustedEnd(Point adjustedEnd);
+    void setAdjustedEndPoint(Point adjustedEnd);
 
-    Point getAdjustedStart();
+    Point getAdjustedStartPoint();
 
-    Point getAdjustedEnd();
+    Point getAdjustedEndPoint();
 
     ShapeConfig getShapeConfiguration();
 
