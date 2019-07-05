@@ -1,12 +1,10 @@
 package view.interfaces;
 
 import model.ShapeConfig;
-
-import java.awt.*;
 import controller.Point;
 
 public interface IDrawShapes {
-    void paint(Graphics g);
+    void paint();
 
     Point getStartPoint();
 

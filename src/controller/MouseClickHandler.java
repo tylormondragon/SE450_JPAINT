@@ -26,6 +26,7 @@ public class MouseClickHandler extends MouseAdapter {
 
     @Override
     public void mousePressed(MouseEvent e) {
+        System.out.println("Mouse pressed!");
         startPoint = new Point(e.getX(), e.getY());
         applicationState.setStartPoint(startPoint);
     }
@@ -40,6 +41,8 @@ public class MouseClickHandler extends MouseAdapter {
             ShapeCreate newShape = new ShapeCreate(applicationState, shapeList, shapeConfig);
             newShape.run();
         }
+
+        System.out.println("Mouse Released");
     }
 
 }

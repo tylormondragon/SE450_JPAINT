@@ -17,8 +17,11 @@ public class Main {
         PaintCanvasBase paintCanvas = new PaintCanvas();
         IGuiWindow guiWindow = new GuiWindow(paintCanvas);
         IUiModule uiModule = new Gui(guiWindow);
+
         ApplicationState appState = new ApplicationState(uiModule);
+        paintCanvas.setCursor((new Cursor(Cursor.CROSSHAIR_CURSOR)));
         IJPaintController controller = new JPaintController(uiModule, appState);
+
         controller.setup();
     }
 }

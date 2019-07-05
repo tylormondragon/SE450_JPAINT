@@ -8,8 +8,6 @@ public class ColorSingleton {
     private static final EnumMap<ShapeColor, Color> color = new EnumMap<>(ShapeColor.class);
 
     static {
-
-
         color.put(ShapeColor.BLACK, Color.BLACK);
         color.put(ShapeColor.BLUE, Color.BLUE);
         color.put(ShapeColor.CYAN, Color.CYAN);
@@ -23,17 +21,11 @@ public class ColorSingleton {
         color.put(ShapeColor.RED, Color.RED);
         color.put(ShapeColor.WHITE, Color.WHITE);
         color.put(ShapeColor.YELLOW, Color.YELLOW);
-
     }
 
-    private ColorSingleton() {
-    }
+    private ColorSingleton() {}
 
     public static Color getColor(ShapeColor enumColor) {
-
-
         return color.get(enumColor);
-
-
     }
 }

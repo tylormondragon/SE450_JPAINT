@@ -6,6 +6,7 @@ import model.ShapeType;
 import controller.Point;
 import model.dialogs.ColorSingleton;
 import view.interfaces.IDrawShapes;
+import view.interfaces.PaintCanvasBase;
 
 import java.awt.*;
 
@@ -21,7 +22,7 @@ public class DrawRectangle implements IDrawShapes {
     private Point startPoint;
     private Point endPoint;
     private ShapeType shapeType;
-
+    private PaintCanvas paintCanvas;
 
     public DrawRectangle(ShapeConfig shapeConfig) {
         this.shapeConfig = shapeConfig;
@@ -37,69 +38,78 @@ public class DrawRectangle implements IDrawShapes {
         this.shapeType = shapeType;
     }
 
-    public void paint(Graphics g) {
-        Graphics2D graph = (Graphics2D) g;
+    @Override
+    public void paint() {
+        Graphics2D g = paintCanvas.getGraphics2D();
         if(shadingType.equals(ShapeShadingType.OUTLINE)) {
             g.setColor(primaryColor);
-            graph.setStroke(new BasicStroke(8));
             g.drawRect(adjustedStartPoint.getX(), adjustedStartPoint.getY(), width, height);
         }
         else if(shadingType.equals(ShapeShadingType.FILLED_IN)) {
             g.setColor(primaryColor);
-            graph.setStroke(new BasicStroke(8));
             g.fillRect(adjustedStartPoint.getX(), adjustedStartPoint.getY(), width, height);
         }
         else if(shadingType.equals(ShapeShadingType.OUTLINE_AND_FILLED_IN)) {
             g.setColor(primaryColor);
-            graph.setStroke(new BasicStroke(8));
             g.drawRect(adjustedStartPoint.getX(), adjustedStartPoint.getY(), width, height);
             g.setColor(secondaryColor);
             g.fillRect(adjustedStartPoint.getX(), adjustedStartPoint.getY(), width, height);
         }
     }
 
+    @Override
     public int getHeight() {
         return height;
     }
 
+    @Override
     public int getWidth() {
         return width;
     }
 
+    @Override
     public Point getStartPoint() {
         return startPoint;
     }
 
+    @Override
     public Point getEndPoint() {
         return endPoint;
     }
 
+    @Override
     public void setAdjustedStartPoint(Point adjustedStartPoint) {
         this.adjustedStartPoint = adjustedStartPoint;
     }
 
+    @Override
     public void setAdjustedEndPoint(Point adjustedEndPoint) {
         this.adjustedEndPoint = adjustedEndPoint;
     }
 
+    @Override
     public Point getAdjustedStartPoint() {
         return adjustedStartPoint;
     }
 
+    @Override
     public Point getAdjustedEndPoint() {
         return adjustedEndPoint;
     }
 
+    @Override
     public void addX(int dx) {
         adjustedStartPoint.setX(adjustedStartPoint.getX() + dx);
         adjustedEndPoint.setX(adjustedEndPoint.getX() + dx);
     }
 
+    @Override
     public void addY(int dy) {
         adjustedStartPoint.setY(adjustedStartPoint.getY() + dy);
         adjustedEndPoint.setY(adjustedEndPoint.getY() + dy);
     }
 
+    @Override
     public ShapeConfig getShapeConfiguration() {
         return shapeConfig;
     }
