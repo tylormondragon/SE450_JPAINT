@@ -6,7 +6,6 @@ import model.ShapeType;
 import controller.Point;
 import model.dialogs.ColorSingleton;
 import view.interfaces.IDrawShapes;
-import view.interfaces.PaintCanvasBase;
 
 import java.awt.*;
 
