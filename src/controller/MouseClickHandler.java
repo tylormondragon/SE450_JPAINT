@@ -16,7 +16,6 @@ public class MouseClickHandler extends MouseAdapter {
     private IApplicationState applicationState;
     private ShapeList shapeList; //todo: does this need to be made an interface?
     private ShapeConfig shapeConfig;
-    ArrayList<ShapeColor> shapeColor = new ArrayList<>();
 
     public MouseClickHandler(IApplicationState applicationState, ShapeList shapeList, ShapeConfig shapeConfig) {
         this.applicationState = applicationState;
