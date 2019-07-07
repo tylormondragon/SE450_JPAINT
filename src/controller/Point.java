@@ -1,3 +1,4 @@
+//Create a point class for drawing shapes on canvas
 package controller;
 
 public class Point {
