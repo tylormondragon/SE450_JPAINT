@@ -106,10 +106,14 @@ public class ShapeConfig {
     }
 
     public int getWidth() {
-        return width;
+        Point adjustedStart = getAdjustedStartPoint();
+        Point adjustedEnd = getAdjustedEndPoint();
+        return adjustedEnd.getX() - adjustedStart.getX();
     }
 
     public int getHeight() {
-        return height;
+        Point adjustedStart = getAdjustedStartPoint();
+        Point adjustedEnd = getAdjustedEndPoint();
+        return adjustedEnd.getY() - adjustedStart.getY();
     }
 }

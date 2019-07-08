@@ -25,7 +25,7 @@ public class DrawRectangle implements IDrawShapes {
 
     public DrawRectangle(ShapeConfig shapeConfig) {
         this.shapeConfig = shapeConfig;
-        this.shadingType = shadingType;
+        this.shadingType = shapeConfig.getShadingType();
         this.primaryColor = ColorSingleton.getColor(shapeConfig.getPrimaryShapeColor());
         this.secondaryColor = ColorSingleton.getColor(shapeConfig.getSecondaryShapeColor());
         this.width = shapeConfig.getWidth();
@@ -34,12 +34,12 @@ public class DrawRectangle implements IDrawShapes {
         this.adjustedEndPoint = shapeConfig.getAdjustedEndPoint();
         this.startPoint = shapeConfig.getStartPoint();
         this.endPoint = shapeConfig.getEndPoint();
-        this.shapeType = shapeType;
+        this.shapeType = shapeConfig.getShapeType();
     }
 
     @Override
-    public void paint() {
-        Graphics2D g = paintCanvas.getGraphics2D();
+    public void paint(Graphics g) {
+        Graphics2D g2 = (Graphics2D) g;
         if(shadingType.equals(ShapeShadingType.OUTLINE)) {
             g.setColor(primaryColor);
             g.drawRect(adjustedStartPoint.getX(), adjustedStartPoint.getY(), width, height);

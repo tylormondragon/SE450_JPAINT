@@ -1,11 +1,12 @@
 package controller;
 
-import model.ShapeColor;
 import model.ShapeConfig;
 import model.ShapeList;
 import model.StartAndEndPointMode;
 import model.interfaces.IApplicationState;
+import view.gui.PaintCanvas;
 
+import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ public class MouseClickHandler extends MouseAdapter {
         System.out.println("Mouse pressed!");
         startPoint = new Point(e.getX(), e.getY());
         applicationState.setStartPoint(startPoint);
-        System.out.printf("%d, %d\n", startPoint.getX(), startPoint.getY());
+        System.out.printf("startpoint(%d, %d)\n", startPoint.getX(), startPoint.getY());
     }
 
     @Override
@@ -43,7 +44,7 @@ public class MouseClickHandler extends MouseAdapter {
         }
 
         System.out.println("Mouse Released");
-        System.out.printf("%d, %d\n", endPoint.getX(), endPoint.getY());
+        System.out.printf("endpoint(%d, %d)\n", endPoint.getX(), endPoint.getY());
     }
 
 }

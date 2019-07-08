@@ -4,7 +4,10 @@ import model.ShapeConfig;
 import model.ShapeFactory;
 import model.ShapeList;
 import model.interfaces.IApplicationState;
+import view.gui.PaintCanvas;
 import view.interfaces.IDrawShapes;
+
+import java.awt.*;
 
 public class ShapeCreate implements ICommand {
     ShapeFactory shapeFactory = new ShapeFactory();
@@ -12,6 +15,7 @@ public class ShapeCreate implements ICommand {
     private ShapeConfig shapeConfig;
     private ShapeList shapeList;
     private IDrawShapes shape;
+    private PaintCanvas paintCanvas;
 
     public ShapeCreate(IApplicationState applicationState, ShapeList shapeList, ShapeConfig shapeConfig) {
         this.applicationState = applicationState;
