@@ -1,6 +1,5 @@
 package view.gui;
 
-
 import view.interfaces.PaintCanvasBase;
 import java.awt.*;
 

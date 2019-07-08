@@ -28,6 +28,7 @@ public class MouseClickHandler extends MouseAdapter {
         System.out.println("Mouse pressed!");
         startPoint = new Point(e.getX(), e.getY());
         applicationState.setStartPoint(startPoint);
+        System.out.printf("%d, %d\n", startPoint.getX(), startPoint.getY());
     }
 
     @Override
@@ -42,6 +43,7 @@ public class MouseClickHandler extends MouseAdapter {
         }
 
         System.out.println("Mouse Released");
+        System.out.printf("%d, %d\n", endPoint.getX(), endPoint.getY());
     }
 
 }
