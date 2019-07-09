@@ -18,8 +18,8 @@ import java.awt.*;
 public class Main {
     public static void main(String[] args){
         ShapeConfig shapeConfig = new ShapeConfig();
-        ShapeList shapeList = new ShapeList();
         PaintCanvasBase paintCanvas = new PaintCanvas();
+        ShapeList shapeList = new ShapeList(paintCanvas);
         IGuiWindow guiWindow = new GuiWindow(paintCanvas);
         IUiModule uiModule = new Gui(guiWindow);
         ApplicationState appState = new ApplicationState(uiModule);

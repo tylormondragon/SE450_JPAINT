@@ -15,7 +15,6 @@ public class ShapeCreate implements ICommand {
     private ShapeConfig shapeConfig;
     private ShapeList shapeList;
     private IDrawShapes shape;
-    private PaintCanvas paintCanvas;
 
     public ShapeCreate(IApplicationState applicationState, ShapeList shapeList, ShapeConfig shapeConfig) {
         this.applicationState = applicationState;
@@ -23,7 +22,6 @@ public class ShapeCreate implements ICommand {
         this.shapeConfig = shapeConfig;
     }
 
-    @Override
     public void run() {
         shapeConfig = applicationState.getCurrentShapeConfig();
         shape = shapeFactory.createShape(shapeConfig);

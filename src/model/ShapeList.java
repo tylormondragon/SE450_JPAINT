@@ -1,20 +1,28 @@
 package model;
 
+import view.gui.PaintCanvas;
 import view.interfaces.IDrawShapes;
+import view.interfaces.PaintCanvasBase;
+
+import java.awt.*;
 import java.util.ArrayList;
 
 public class ShapeList {
     private final ArrayList<IDrawShapes> shapesList;
+    private PaintCanvasBase paintCanvas;
     //Selected shapes list later todo: review this during refactor when we know about other design patterns
 
     //Constructor for my basic shape list
-    public ShapeList() {
+    public ShapeList(PaintCanvasBase paintCanvas) {
         shapesList = new ArrayList<IDrawShapes>();
+        this.paintCanvas = paintCanvas;
     }
 
     //Method to add a shape to the shape list
     public void add(IDrawShapes shape) {
         shapesList.add(shape);
+        Graphics2D g = paintCanvas.getGraphics2D();
+        shape.paint(g);
     }
 
     //Method to remove a shape from the shape list
