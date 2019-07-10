@@ -10,7 +10,6 @@ public class ShapeConfig {
     private Point endPoint;
     private ShapeShadingType shadingType;
     private ShapeType shapeType;
-    private IDrawShapes selectedShape;
     private Point adjustedStartPoint;
     private Point adjustedEndPoint;
     private int width;
@@ -39,10 +38,6 @@ public class ShapeConfig {
 
     public void setShapeType(ShapeType shapeType) {
         this.shapeType = shapeType;
-    }
-
-    public void setSelectedShape(IDrawShapes selectedShape) {
-        this.selectedShape = selectedShape;
     }
 
     public void setAdjustedStartPoint(Point adjustedStartPoint) {
@@ -89,9 +84,6 @@ public class ShapeConfig {
         return shapeType;
     }
 
-    public IDrawShapes getSelectedShape() {
-        return selectedShape;
-    }
 
     public Point getAdjustedStartPoint() {
         int xStart = Math.min(startPoint.getX(), endPoint.getX());
