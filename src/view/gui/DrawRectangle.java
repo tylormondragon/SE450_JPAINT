@@ -21,7 +21,6 @@ public class DrawRectangle implements IDrawShapes {
     private Point startPoint;
     private Point endPoint;
     private ShapeType shapeType;
-    private PaintCanvas paintCanvas;
 
     public DrawRectangle(ShapeConfig shapeConfig) {
         this.shapeConfig = shapeConfig;

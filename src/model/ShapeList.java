@@ -10,7 +10,6 @@ import java.util.ArrayList;
 public class ShapeList {
     private final ArrayList<IDrawShapes> shapesList;
     private PaintCanvasBase paintCanvas;
-    //Selected shapes list later todo: review this during refactor when we know about other design patterns
 
     //Constructor for my basic shape list
     public ShapeList(PaintCanvasBase paintCanvas) {

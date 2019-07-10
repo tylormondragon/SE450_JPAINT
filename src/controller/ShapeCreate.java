@@ -4,10 +4,8 @@ import model.ShapeConfig;
 import model.ShapeFactory;
 import model.ShapeList;
 import model.interfaces.IApplicationState;
-import view.gui.PaintCanvas;
 import view.interfaces.IDrawShapes;
 
-import java.awt.*;
 
 public class ShapeCreate implements ICommand {
     ShapeFactory shapeFactory = new ShapeFactory();
@@ -27,9 +25,4 @@ public class ShapeCreate implements ICommand {
         shape = shapeFactory.createShape(shapeConfig);
         this.shapeList.add(shape);
     }
-
-    public IDrawShapes getShape() {
-        return shape;
-    }
-
 }

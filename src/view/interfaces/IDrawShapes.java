@@ -25,5 +25,4 @@ public interface IDrawShapes {
     int getWidth();
 
     int getHeight();
-
 }
