@@ -1,7 +1,6 @@
 package model;
 
 import controller.Point;
-import view.interfaces.IDrawShapes;
 
 public class ShapeConfig {
     private ShapeColor primaryShapeColor;

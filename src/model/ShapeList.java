@@ -1,5 +1,6 @@
 package model;
 
+import controller.DrawShapes;
 import view.gui.PaintCanvas;
 import view.interfaces.IDrawShapes;
 import view.interfaces.PaintCanvasBase;
@@ -9,19 +10,19 @@ import java.util.ArrayList;
 
 public class ShapeList {
     private final ArrayList<IDrawShapes> shapesList;
-    private PaintCanvasBase paintCanvas;
+    private DrawShapes drawShapes;
 
     //Constructor for my basic shape list
-    public ShapeList(PaintCanvasBase paintCanvas) {
+    public ShapeList(DrawShapes drawShapes) {
+        this.drawShapes = drawShapes;
         shapesList = new ArrayList<IDrawShapes>();
-        this.paintCanvas = paintCanvas;
     }
 
     //Method to add a shape to the shape list
     public void add(IDrawShapes shape) {
         shapesList.add(shape);
-        Graphics2D g = paintCanvas.getGraphics2D();
-        shape.paint(g);
+        drawShapes.draw(this);
+
     }
 
     //Method to remove a shape from the shape list

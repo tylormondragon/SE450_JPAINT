@@ -1,10 +1,12 @@
 package main;
 
+import controller.DrawShapes;
 import controller.IJPaintController;
 import controller.JPaintController;
 import controller.MouseClickHandler;
 import model.ShapeConfig;
 import model.ShapeList;
+import model.interfaces.IApplicationState;
 import model.persistence.ApplicationState;
 import view.gui.Gui;
 import view.gui.GuiWindow;
@@ -21,11 +23,12 @@ public class Main {
         IGuiWindow guiWindow = new GuiWindow(paintCanvas);
         IUiModule uiModule = new Gui(guiWindow);
         ApplicationState appState = new ApplicationState(uiModule);
+        DrawShapes drawShapes = new DrawShapes(paintCanvas, appState);
         paintCanvas.setCursor((new Cursor(Cursor.HAND_CURSOR)));
         IJPaintController controller = new JPaintController(uiModule, appState);
         controller.setup();
 
-        ShapeList shapeList = new ShapeList(paintCanvas);
+        ShapeList shapeList = new ShapeList(drawShapes);
         ShapeConfig shapeConfig = new ShapeConfig();
         MouseClickHandler mouseHandler = new MouseClickHandler(appState,shapeList, shapeConfig);
         paintCanvas.addMouseListener(mouseHandler);

@@ -36,7 +36,6 @@ public class DrawRectangle implements IDrawShapes {
         this.shapeType = shapeConfig.getShapeType();
     }
 
-    @Override
     public void paint(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
         if(shadingType.equals(ShapeShadingType.OUTLINE)) {
@@ -57,52 +56,40 @@ public class DrawRectangle implements IDrawShapes {
         }
     }
 
-    @Override
     public int getHeight() {
         return height;
     }
 
-    @Override
     public int getWidth() {
         return width;
     }
 
-    @Override
     public Point getStartPoint() {
         return startPoint;
     }
 
-    @Override
     public Point getEndPoint() {
         return endPoint;
     }
 
-    @Override
     public void setAdjustedStartPoint(Point adjustedStartPoint) {
         this.adjustedStartPoint = adjustedStartPoint;
     }
 
-    @Override
     public void setAdjustedEndPoint(Point adjustedEndPoint) {
         this.adjustedEndPoint = adjustedEndPoint;
     }
 
-    @Override
     public Point getAdjustedStartPoint() {
         return adjustedStartPoint;
     }
 
-    @Override
     public Point getAdjustedEndPoint() {
         return adjustedEndPoint;
     }
 
-
-
-    @Override
     public ShapeConfig getShapeConfiguration() {
         return shapeConfig;
     }
-
 
 }
