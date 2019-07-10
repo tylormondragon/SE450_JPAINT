@@ -17,15 +17,16 @@ import java.awt.*;
 
 public class Main {
     public static void main(String[] args){
-        ShapeConfig shapeConfig = new ShapeConfig();
         PaintCanvasBase paintCanvas = new PaintCanvas();
-        ShapeList shapeList = new ShapeList(paintCanvas);
         IGuiWindow guiWindow = new GuiWindow(paintCanvas);
         IUiModule uiModule = new Gui(guiWindow);
         ApplicationState appState = new ApplicationState(uiModule);
         paintCanvas.setCursor((new Cursor(Cursor.CROSSHAIR_CURSOR)));
         IJPaintController controller = new JPaintController(uiModule, appState);
         controller.setup();
+
+        ShapeList shapeList = new ShapeList(paintCanvas);
+        ShapeConfig shapeConfig = new ShapeConfig();
         MouseClickHandler mouseHandler = new MouseClickHandler(appState,shapeList, shapeConfig);
         paintCanvas.addMouseListener(mouseHandler);
     }

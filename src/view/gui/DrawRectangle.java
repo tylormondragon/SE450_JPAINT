@@ -42,6 +42,7 @@ public class DrawRectangle implements IDrawShapes {
         Graphics2D g2 = (Graphics2D) g;
         if(shadingType.equals(ShapeShadingType.OUTLINE)) {
             g.setColor(primaryColor);
+            g2.setStroke(new BasicStroke(9));
             g.drawRect(adjustedStartPoint.getX(), adjustedStartPoint.getY(), width, height);
         }
         else if(shadingType.equals(ShapeShadingType.FILLED_IN)) {
@@ -50,6 +51,7 @@ public class DrawRectangle implements IDrawShapes {
         }
         else if(shadingType.equals(ShapeShadingType.OUTLINE_AND_FILLED_IN)) {
             g.setColor(primaryColor);
+            g2.setStroke(new BasicStroke(10));
             g.drawRect(adjustedStartPoint.getX(), adjustedStartPoint.getY(), width, height);
             g.setColor(secondaryColor);
             g.fillRect(adjustedStartPoint.getX(), adjustedStartPoint.getY(), width, height);
@@ -96,17 +98,7 @@ public class DrawRectangle implements IDrawShapes {
         return adjustedEndPoint;
     }
 
-    @Override
-    public void addX(int dx) {
-        adjustedStartPoint.setX(adjustedStartPoint.getX() + dx);
-        adjustedEndPoint.setX(adjustedEndPoint.getX() + dx);
-    }
 
-    @Override
-    public void addY(int dy) {
-        adjustedStartPoint.setY(adjustedStartPoint.getY() + dy);
-        adjustedEndPoint.setY(adjustedEndPoint.getY() + dy);
-    }
 
     @Override
     public ShapeConfig getShapeConfiguration() {
