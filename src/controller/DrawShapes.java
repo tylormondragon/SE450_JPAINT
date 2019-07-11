@@ -10,7 +10,7 @@ import java.awt.*;
 
 public class DrawShapes {
     private final PaintCanvasBase paintCanvas;
-    private IApplicationState appState;
+    private final IApplicationState appState;
 
     public DrawShapes(PaintCanvasBase paintCanvas, ApplicationState appState) {
         this.paintCanvas = paintCanvas;

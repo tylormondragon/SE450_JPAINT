@@ -1,7 +1,10 @@
 package model;
 
+import view.gui.DrawEllipse;
 import view.gui.DrawRectangle;
 import view.interfaces.IDrawShapes;
+
+import java.awt.*;
 
 public class ShapeFactory {
     public IDrawShapes createShape(ShapeConfig shapeConfig) {
@@ -10,6 +13,9 @@ public class ShapeFactory {
 
         if(shapeType.equals(ShapeType.RECTANGLE)) {
             shape = new DrawRectangle(shapeConfig);
+        }
+        if(shapeType.equals(ShapeType.ELLIPSE)) {
+            shape = new DrawEllipse(shapeConfig);
         }
         return shape;
     }
