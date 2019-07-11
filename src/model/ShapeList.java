@@ -1,11 +1,7 @@
 package model;
 
 import controller.DrawShapes;
-import view.gui.PaintCanvas;
 import view.interfaces.IDrawShapes;
-import view.interfaces.PaintCanvasBase;
-
-import java.awt.*;
 import java.util.ArrayList;
 
 public class ShapeList {
@@ -28,6 +24,7 @@ public class ShapeList {
     //Method to remove a shape from the shape list
     public void remove(IDrawShapes shape) {
         shapesList.remove(shape);
+        drawShapes.draw(this);
     }
 
     //Method to retrieve the shape list

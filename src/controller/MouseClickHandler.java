@@ -4,12 +4,8 @@ import model.ShapeConfig;
 import model.ShapeList;
 import model.StartAndEndPointMode;
 import model.interfaces.IApplicationState;
-import view.gui.PaintCanvas;
-
-import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.util.ArrayList;
 
 public class MouseClickHandler extends MouseAdapter {
     private Point startPoint;
@@ -41,6 +37,15 @@ public class MouseClickHandler extends MouseAdapter {
         if(mouseMode == StartAndEndPointMode.DRAW) {
             ShapeCreate newShape = new ShapeCreate(applicationState, shapeList, shapeConfig);
             newShape.run();
+        }
+        else if(mouseMode == StartAndEndPointMode.SELECT) {
+            //ShapeSelect selectShapes
+            //selectShapes.run()
+        }
+        else {
+            //ShapeMove moveShapes
+            //moveShapes.run()
+            //Immutable - remove from list and add updated to shapelist
         }
 
         System.out.println("Mouse Released");

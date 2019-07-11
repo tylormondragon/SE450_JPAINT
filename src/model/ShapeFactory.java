@@ -2,6 +2,7 @@ package model;
 
 import view.gui.DrawEllipse;
 import view.gui.DrawRectangle;
+import view.gui.DrawTriangle;
 import view.interfaces.IDrawShapes;
 
 import java.awt.*;
@@ -16,6 +17,9 @@ public class ShapeFactory {
         }
         if(shapeType.equals(ShapeType.ELLIPSE)) {
             shape = new DrawEllipse(shapeConfig);
+        }
+        if(shapeType.equals(ShapeType.TRIANGLE)) {
+            shape = new DrawTriangle(shapeConfig);
         }
         return shape;
     }
