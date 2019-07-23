@@ -12,6 +12,7 @@ public class MouseClickHandler extends MouseAdapter {
     private Point endPoint;
     private IApplicationState applicationState;
     private ShapeList shapeList; //todo: does this need to be made an interface?
+    private ShapeList selectedShapeList;
     private ShapeConfig shapeConfig;
 
     public MouseClickHandler(IApplicationState applicationState, ShapeList shapeList, ShapeConfig shapeConfig) {
@@ -39,12 +40,12 @@ public class MouseClickHandler extends MouseAdapter {
             newShape.run();
         }
         else if(mouseMode == StartAndEndPointMode.SELECT) {
-            //ShapeSelect selectShapes
-            //selectShapes.run()
+            ShapeSelect selectShape = new ShapeSelect(applicationState, shapeList, selectedShapeList, shapeConfig);
+            selectShape.run();
         }
         else {
-            //ShapeMove moveShapes
-            //moveShapes.run()
+            ShapeMove shapeMove = new ShapeMove(applicationState, shapeList, selectedShapeList, shapeConfig);
+            shapeMove.run();
             //Immutable - remove from list and add updated to shapelist
         }
 

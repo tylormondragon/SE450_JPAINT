@@ -2,16 +2,21 @@ package model;
 
 import controller.DrawShapes;
 import view.interfaces.IDrawShapes;
+import view.interfaces.PaintCanvasBase;
+
+import java.awt.*;
 import java.util.ArrayList;
 
 public class ShapeList {
     private final ArrayList<IDrawShapes> shapesList;
+    private final ArrayList<IDrawShapes> selectedShapesList;
     private DrawShapes drawShapes;
+    private PaintCanvasBase paintCanvas;
 
-    //Constructor for my basic shape list
     public ShapeList(DrawShapes drawShapes) {
         this.drawShapes = drawShapes;
-        shapesList = new ArrayList<IDrawShapes>();
+        shapesList = new ArrayList<>();
+        selectedShapesList = new ArrayList<>();
     }
 
     //Method to add a shape to the shape list
@@ -27,8 +32,18 @@ public class ShapeList {
         drawShapes.draw(this);
     }
 
+    public void addSelectedList(IDrawShapes shape) {
+        selectedShapesList.add(shape);
+    }
+
     //Method to retrieve the shape list
     public ArrayList<IDrawShapes> getShapesList() {
         return shapesList;
     }
+
+    public ArrayList<IDrawShapes> getSelectedShapesList() {
+        return selectedShapesList;
+    }
+
+
 }

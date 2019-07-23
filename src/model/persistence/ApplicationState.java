@@ -57,6 +57,36 @@ public class ApplicationState implements IApplicationState, Serializable {
         activeSecondaryColor = uiModule.getDialogResponse(dialogProvider.getChooseSecondaryColorDialog());
     }
 
+    public Point getStartPoint() {
+        return startPoint;
+    }
+
+    public Point getEndPoint() {
+        return endPoint;
+    }
+
+    public Point getAdjustedStart() {
+        int startX = Math.min(startPoint.getX(), endPoint.getX());
+        int startY = Math.min(startPoint.getY(), endPoint.getY());
+        adjustedStartPoint = new Point(startX, startY);
+        return adjustedStartPoint;
+    }
+
+    public Point getAdjustedEnd() {
+        int endX = Math.max(startPoint.getX(), endPoint.getX());
+        int endY = Math.max(startPoint.getY(), endPoint.getY());
+        adjustedEndPoint = new Point(endX, endY);
+        return adjustedEndPoint;
+    }
+
+    public void setAdjustedStart(Point adjustedStart) {
+        this.adjustedStartPoint = adjustedStart;
+    }
+
+    public void setAdjustedEnd(Point adjustedEnd) {
+        this.adjustedEndPoint = adjustedEnd;
+    }
+
     @Override
     public void setActiveShadingType() {
         activeShapeShadingType = uiModule.getDialogResponse(dialogProvider.getChooseShadingTypeDialog());

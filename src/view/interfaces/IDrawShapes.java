@@ -16,6 +16,10 @@ public interface IDrawShapes {
 
     void setAdjustedEndPoint(Point adjustedEnd);
 
+    void addX(int dx);
+
+    void addY(int dy);
+
     Point getAdjustedStartPoint();
 
     Point getAdjustedEndPoint();

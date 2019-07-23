@@ -24,6 +24,14 @@ public interface IApplicationState {
 
     StartAndEndPointMode getActiveStartAndEndPointMode();
 
+    Point getStartPoint();
+
+    Point getEndPoint();
+
+    Point getAdjustedStart();
+
+    Point getAdjustedEnd();
+
     void setStartPoint(Point startPoint);
 
     void setEndPoint(Point endPoint);
