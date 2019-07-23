@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39167904-02f3-4614-b693-f41467719ef3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SE450_JPAINT/controller/MouseClickHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SE450_JPAINT/controller/MouseClickHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SE450_JPAINT/view/gui/DrawEllipse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SE450_JPAINT/view/gui/DrawEllipse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SE450_JPAINT/view/gui/DrawRectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SE450_JPAINT/view/gui/DrawRectangle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SE450_JPAINT/view/gui/DrawTriangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SE450_JPAINT/view/gui/DrawTriangle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/DrawShapes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/DrawShapes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/MouseClickHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/MouseClickHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/ShapeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/ShapeList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/interfaces/IApplicationState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/interfaces/IApplicationState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/persistence/ApplicationState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/persistence/ApplicationState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/gui/DrawEllipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/gui/DrawEllipse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/gui/DrawRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/gui/DrawRectangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/gui/DrawTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/gui/DrawTriangle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/interfaces/IDrawShapes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/interfaces/IDrawShapes.java" afterDir="false" />
-    </list>
+    <list default="true" id="39167904-02f3-4614-b693-f41467719ef3" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,8 +87,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/DrawShapes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+            <state relative-caret-position="330">
+              <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -355,12 +343,12 @@
       <workItem from="1562508185907" duration="24286000" />
       <workItem from="1562633246555" duration="2397000" />
       <workItem from="1562789637041" duration="13615000" />
-      <workItem from="1563759773455" duration="9981000" />
+      <workItem from="1563759773455" duration="10223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63441000" />
+    <option name="totallyTimeSpent" value="63683000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="949" extended-state="6" />
@@ -835,8 +823,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/DrawShapes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+        <state relative-caret-position="330">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
