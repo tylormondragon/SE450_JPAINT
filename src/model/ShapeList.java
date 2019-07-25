@@ -3,8 +3,6 @@ package model;
 import controller.DrawShapes;
 import view.interfaces.IDrawShapes;
 import view.interfaces.PaintCanvasBase;
-
-import java.awt.*;
 import java.util.ArrayList;
 
 public class ShapeList {
@@ -30,6 +28,10 @@ public class ShapeList {
     public void remove(IDrawShapes shape) {
         shapesList.remove(shape);
         drawShapes.draw(this);
+    }
+
+    public void clearSelectedList() {
+        selectedShapesList.clear();
     }
 
     public void addSelectedList(IDrawShapes shape) {

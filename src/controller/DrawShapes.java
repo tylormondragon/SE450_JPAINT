@@ -20,7 +20,8 @@ public class DrawShapes {
         Graphics2D g = paintCanvas.getGraphics2D();
         g.setColor(Color.WHITE);
         g.fillRect(0,0, paintCanvas.getWidth(), paintCanvas.getHeight());
-        for(IDrawShapes shape: shapeList.getShapesList())
-        shape.paint(g);
+        for(IDrawShapes shape: shapeList.getShapesList()) {
+            shape.paint(g);
+        }
     }
 }

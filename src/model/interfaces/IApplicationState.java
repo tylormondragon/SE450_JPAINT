@@ -28,9 +28,9 @@ public interface IApplicationState {
 
     Point getEndPoint();
 
-    Point getAdjustedStart();
+    Point getAdjustedStartPoint();
 
-    Point getAdjustedEnd();
+    Point getAdjustedEndPoint();
 
     void setStartPoint(Point startPoint);
 

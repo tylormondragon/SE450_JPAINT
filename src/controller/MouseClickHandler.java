@@ -28,7 +28,8 @@ public class MouseClickHandler extends MouseAdapter {
         applicationState.setStartPoint(startPoint);
         System.out.printf("startpoint(%d, %d)\n", startPoint.getX(), startPoint.getY());
     }
-
+    //todo: How to keep selected shapes selected to move multiple times?
+    //todo: Advice on refactoring shapes to strategy pattern?
     @Override
     public void mouseReleased(MouseEvent e) {
         endPoint = new Point(e.getX(), e.getY());
@@ -46,7 +47,6 @@ public class MouseClickHandler extends MouseAdapter {
         else {
             ShapeMove shapeMove = new ShapeMove(applicationState, shapeList, selectedShapeList, shapeConfig);
             shapeMove.run();
-            //Immutable - remove from list and add updated to shapelist
         }
 
         System.out.println("Mouse Released");

@@ -9,8 +9,7 @@ import view.interfaces.IUiModule;
 
 import java.io.Serializable;
 
-public class ApplicationState implements IApplicationState, Serializable {
-    private static final long serialVersionUID = -5545483996576839008L;
+public class ApplicationState implements IApplicationState{
     private final IUiModule uiModule;
     private final IDialogProvider dialogProvider;
     private ShapeList shapeList;
@@ -65,25 +64,25 @@ public class ApplicationState implements IApplicationState, Serializable {
         return endPoint;
     }
 
-    public Point getAdjustedStart() {
+    public Point getAdjustedStartPoint() {
         int startX = Math.min(startPoint.getX(), endPoint.getX());
         int startY = Math.min(startPoint.getY(), endPoint.getY());
         adjustedStartPoint = new Point(startX, startY);
         return adjustedStartPoint;
     }
 
-    public Point getAdjustedEnd() {
+    public Point getAdjustedEndPoint() {
         int endX = Math.max(startPoint.getX(), endPoint.getX());
         int endY = Math.max(startPoint.getY(), endPoint.getY());
         adjustedEndPoint = new Point(endX, endY);
         return adjustedEndPoint;
     }
 
-    public void setAdjustedStart(Point adjustedStart) {
+    public void setAdjustedStartPoint(Point adjustedStart) {
         this.adjustedStartPoint = adjustedStart;
     }
 
-    public void setAdjustedEnd(Point adjustedEnd) {
+    public void setAdjustedEndPoint(Point adjustedEnd) {
         this.adjustedEndPoint = adjustedEnd;
     }
 

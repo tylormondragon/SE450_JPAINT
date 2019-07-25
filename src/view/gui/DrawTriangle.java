@@ -103,12 +103,18 @@ public class DrawTriangle implements IDrawShapes {
 
     @Override
     public void addX(int dx) {
+        this.x[0] = adjustedStartPoint.getX() + dx;
+        this.x[1] = adjustedEndPoint.getX() + dx;
+        this.x[2] = adjustedStartPoint.getX() + dx;
         adjustedStartPoint.setX(adjustedStartPoint.getX() + dx);
         adjustedEndPoint.setX(adjustedEndPoint.getX() + dx);
     }
 
     @Override
     public void addY(int dy) {
+        this.y[0] = adjustedStartPoint.getY() + dy;
+        this.y[1] = adjustedEndPoint.getY() + dy;
+        this.y[2] = adjustedEndPoint.getY() + dy;
         adjustedStartPoint.setY(adjustedStartPoint.getY() + dy);
         adjustedEndPoint.setY(adjustedEndPoint.getY() + dy);
     }

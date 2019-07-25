@@ -28,6 +28,5 @@ public class ShapeMove implements ICommand {
             selected.addY(dy);
             shapeList.add(selected);
         }
-        shapeList.getSelectedShapesList().clear();
     }
 }
