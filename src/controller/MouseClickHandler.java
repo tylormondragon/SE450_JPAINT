@@ -4,6 +4,8 @@ import model.ShapeConfig;
 import model.ShapeList;
 import model.StartAndEndPointMode;
 import model.interfaces.IApplicationState;
+import view.interfaces.PaintCanvasBase;
+
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -14,6 +16,7 @@ public class MouseClickHandler extends MouseAdapter {
     private ShapeList shapeList; //todo: does this need to be made an interface?
     private ShapeList selectedShapeList;
     private ShapeConfig shapeConfig;
+    private PaintCanvasBase paintCanvas;
 
     public MouseClickHandler(IApplicationState applicationState, ShapeList shapeList, ShapeConfig shapeConfig) {
         this.applicationState = applicationState;

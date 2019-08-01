@@ -3,14 +3,18 @@ package controller;
 import model.ShapeConfig;
 import model.ShapeList;
 import model.interfaces.IApplicationState;
-import model.persistence.ApplicationState;
 import view.interfaces.IDrawShapes;
+import view.interfaces.PaintCanvasBase;
+
+import java.awt.*;
+
 
 public class ShapeSelect implements ICommand {
     private IApplicationState applicationState;
     private ShapeList shapeList;
     private ShapeList selectedShapeList;
     private ShapeConfig shapeConfig;
+    private Graphics2D g;
 
 
     public ShapeSelect(IApplicationState applicationState, ShapeList shapeList, ShapeList selectedShapeList, ShapeConfig shapeConfig) {
@@ -28,7 +32,6 @@ public class ShapeSelect implements ICommand {
                     shape.getAdjustedStartPoint().getX() + shape.getWidth() > shapeConfig.getAdjustedStartPoint().getX() &&
                     shape.getAdjustedStartPoint().getY() < shapeConfig.getAdjustedStartPoint().getY() + shapeConfig.getHeight() &&
                     shape.getAdjustedStartPoint().getY() + shape.getHeight() > shapeConfig.getAdjustedStartPoint().getY()) {
-                //if(shapeList.getSelectedShapesList().contains(shape)) continue;
                 shapeList.addSelectedList(shape);
                 System.out.println("Selected Shape " + shape.toString());
             }

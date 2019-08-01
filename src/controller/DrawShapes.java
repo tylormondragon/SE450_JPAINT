@@ -2,7 +2,6 @@ package controller;
 
 import model.ShapeList;
 import model.interfaces.IApplicationState;
-import model.persistence.ApplicationState;
 import view.interfaces.IDrawShapes;
 import view.interfaces.PaintCanvasBase;
 
@@ -12,7 +11,7 @@ public class DrawShapes {
     private final PaintCanvasBase paintCanvas;
     private final IApplicationState appState;
 
-    public DrawShapes(PaintCanvasBase paintCanvas, ApplicationState appState) {
+    public DrawShapes(PaintCanvasBase paintCanvas, IApplicationState appState) {
         this.paintCanvas = paintCanvas;
         this.appState = appState;
     }
@@ -22,6 +21,9 @@ public class DrawShapes {
         g.fillRect(0,0, paintCanvas.getWidth(), paintCanvas.getHeight());
         for(IDrawShapes shape: shapeList.getShapesList()) {
             shape.paint(g);
+            if(shapeList.getSelectedShapesList().contains(shape)) {
+                shape.drawOutline(g);
+            }
         }
     }
 }

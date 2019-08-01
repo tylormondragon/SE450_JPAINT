@@ -56,6 +56,13 @@ public class DrawRectangle implements IDrawShapes {
         }
     }
 
+    public void drawOutline(Graphics2D g) {
+        Stroke stroke = new BasicStroke(3, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 1, new float[]{9}, 0);
+        g.setStroke(stroke);
+        g.setColor(Color.BLACK);
+        g.drawRect(adjustedStartPoint.getX() - 5, adjustedStartPoint.getY() - 5, width + 10, height + 10);
+    }
+
     public int getHeight() {
         return height;
     }
@@ -72,12 +79,12 @@ public class DrawRectangle implements IDrawShapes {
         return endPoint;
     }
 
-    public void setAdjustedStartPoint(Point adjustedStartPoint) {
-        this.adjustedStartPoint = adjustedStartPoint;
+    public void setAdjustedStartPoint(int x, int y) {
+        this.adjustedStartPoint = new Point(x, y);
     }
 
-    public void setAdjustedEndPoint(Point adjustedEndPoint) {
-        this.adjustedEndPoint = adjustedEndPoint;
+    public void setAdjustedEndPoint(int x, int y) {
+        this.adjustedEndPoint = new Point(x, y);
     }
 
     public Point getAdjustedStartPoint() {

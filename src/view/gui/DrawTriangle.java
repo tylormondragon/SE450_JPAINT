@@ -45,6 +45,9 @@ public class DrawTriangle implements IDrawShapes {
         this.y[2] = shapeConfig.getAdjustedEndPoint().getY();
     }
 
+    public void drawOutline(Graphics2D g) {
+    }
+
     public void paint(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
         if(shadingType.equals(ShapeShadingType.OUTLINE)) {
@@ -81,12 +84,12 @@ public class DrawTriangle implements IDrawShapes {
         return endPoint;
     }
 
-    public void setAdjustedStartPoint(Point adjustedStartPoint) {
-        this.adjustedStartPoint = adjustedStartPoint;
+    public void setAdjustedStartPoint(int x, int y) {
+        this.adjustedStartPoint = new Point(x, y);
     }
 
-    public void setAdjustedEndPoint(Point adjustedEndPoint) {
-        this.adjustedEndPoint = adjustedEndPoint;
+    public void setAdjustedEndPoint(int x, int y) {
+        this.adjustedEndPoint = new Point(x, y);
     }
 
     public Point getAdjustedStartPoint() {
