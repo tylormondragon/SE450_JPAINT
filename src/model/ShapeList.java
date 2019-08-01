@@ -2,9 +2,6 @@ package model;
 
 import controller.DrawShapes;
 import view.interfaces.IDrawShapes;
-import view.interfaces.PaintCanvasBase;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class ShapeList {
@@ -12,7 +9,6 @@ public class ShapeList {
     private final ArrayList<IDrawShapes> selectedShapesList;
     private final ArrayList<IDrawShapes> copiedShapesList;
     private DrawShapes drawShapes;
-    private PaintCanvasBase paintCanvas;
 
     public ShapeList(DrawShapes drawShapes) {
         this.drawShapes = drawShapes;
@@ -36,10 +32,12 @@ public class ShapeList {
 
     public void clearSelectedList() {
         selectedShapesList.clear();
+        drawShapes.draw(this);
     }
 
     public void addSelectedList(IDrawShapes shape) {
         selectedShapesList.add(shape);
+        drawShapes.draw(this);
     }
 
     //Method to retrieve the shape list

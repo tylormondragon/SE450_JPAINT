@@ -8,7 +8,7 @@ import java.awt.*;
 public interface IDrawShapes {
     void paint(Graphics g);
 
-    void drawOutline(Graphics2D g);
+    void drawOutline(Graphics g);
 
     Point getStartPoint();
 

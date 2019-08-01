@@ -56,9 +56,10 @@ public class DrawEllipse implements IDrawShapes {
         }
     }
 
-    public void drawOutline(Graphics2D g) {
+    public void drawOutline(Graphics g) {
+        Graphics2D g3 = (Graphics2D) g;
         Stroke stroke = new BasicStroke(3, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 1, new float[]{9}, 0);
-        g.setStroke(stroke);
+        g3.setStroke(stroke);
         g.setColor(Color.BLACK);
         g.drawOval(adjustedStartPoint.getX() - 5, adjustedStartPoint.getY() - 5, width + 10, height + 10);
     }

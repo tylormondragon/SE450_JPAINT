@@ -36,5 +36,6 @@ public class ShapeSelect implements ICommand {
                 System.out.println("Selected Shape " + shape.toString());
             }
         }
+
     }
 }

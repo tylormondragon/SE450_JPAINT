@@ -4,8 +4,6 @@ import model.ShapeConfig;
 import model.ShapeList;
 import model.interfaces.IApplicationState;
 import view.interfaces.IDrawShapes;
-
-import java.awt.*;
 import java.util.ArrayList;
 
 
@@ -25,7 +23,6 @@ public class ShapePaste implements ICommand {
     public void run() {
         for(IDrawShapes shape: shapeList.getCopiedShapesList()) {
             copiedShape = shape;
-
             copiedShape.setAdjustedStartPoint(shape.getAdjustedStartPoint().getX() + 80, shape.getAdjustedStartPoint().getY());
             copiedShape.setAdjustedStartPoint(shape.getAdjustedStartPoint().getX(), shape.getAdjustedStartPoint().getY() + 80);
             ShapeCreate newShape = new ShapeCreate(applicationState, shapeList, copiedShape.getShapeConfiguration());
