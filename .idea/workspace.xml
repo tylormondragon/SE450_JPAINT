@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39167904-02f3-4614-b693-f41467719ef3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/ShapePaste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ShapePaste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/ShapeSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/ShapeSelect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/gui/DrawEllipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/gui/DrawEllipse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/gui/DrawRectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/gui/DrawRectangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/gui/DrawTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/gui/DrawTriangle.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,35 +20,64 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/ShapeFactory.java">
+        <entry file="file://$PROJECT_DIR$/src/view/gui/DrawRectangle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            <state relative-caret-position="316">
+              <caret line="64" column="110" selection-start-line="64" selection-start-column="110" selection-end-line="64" selection-end-column="110" />
+              <folding>
+                <element signature="e#3190#3191#0" expanded="true" />
+                <element signature="e#3247#3248#0" expanded="true" />
+                <element signature="e#3316#3317#0" expanded="true" />
+                <element signature="e#3381#3382#0" expanded="true" />
+                <element signature="e#3493#3494#0" expanded="true" />
+                <element signature="e#3601#3602#0" expanded="true" />
+                <element signature="e#3686#3687#0" expanded="true" />
+                <element signature="e#3767#3768#0" expanded="true" />
+                <element signature="e#3851#3852#0" expanded="true" />
+                <element signature="e#4287#4288#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/gui/DrawEllipse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="485">
+              <caret line="71" column="110" selection-start-line="71" selection-start-column="110" selection-end-line="71" selection-end-column="110" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3070#3071#0" expanded="true" />
+                <element signature="e#3125#3126#0" expanded="true" />
+                <element signature="e#3169#3170#0" expanded="true" />
+                <element signature="e#3210#3211#0" expanded="true" />
+                <element signature="e#3252#3253#0" expanded="true" />
+                <element signature="e#3291#3292#0" expanded="true" />
+                <element signature="e#3341#3342#0" expanded="true" />
+                <element signature="e#3375#3376#0" expanded="true" />
+                <element signature="e#3777#3778#0" expanded="true" />
+                <element signature="e#3809#3810#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/gui/DrawTriangle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1725">
-              <caret line="123" column="44" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
+            <state relative-caret-position="409">
+              <caret line="68" column="88" lean-forward="true" selection-start-line="68" selection-start-column="88" selection-end-line="68" selection-end-column="88" />
               <folding>
-                <element signature="e#3067#3068#0" expanded="true" />
-                <element signature="e#3096#3097#0" expanded="true" />
-                <element signature="e#3125#3126#0" expanded="true" />
-                <element signature="e#3153#3154#0" expanded="true" />
-                <element signature="e#3189#3190#0" expanded="true" />
-                <element signature="e#3222#3223#0" expanded="true" />
-                <element signature="e#3256#3257#0" expanded="true" />
-                <element signature="e#3287#3288#0" expanded="true" />
-                <element signature="e#3342#3343#0" expanded="true" />
-                <element signature="e#3399#3400#0" expanded="true" />
-                <element signature="e#3874#3875#0" expanded="true" />
-                <element signature="e#3959#3960#0" expanded="true" />
-                <element signature="e#4040#4041#0" expanded="true" />
-                <element signature="e#4124#4125#0" expanded="true" />
-                <element signature="e#4747#4748#0" expanded="true" />
+                <element signature="e#4084#4085#0" expanded="true" />
+                <element signature="e#4141#4142#0" expanded="true" />
+                <element signature="e#4210#4211#0" expanded="true" />
+                <element signature="e#4275#4276#0" expanded="true" />
+                <element signature="e#4387#4388#0" expanded="true" />
+                <element signature="e#4495#4496#0" expanded="true" />
+                <element signature="e#4580#4581#0" expanded="true" />
+                <element signature="e#4661#4662#0" expanded="true" />
+                <element signature="e#4745#4746#0" expanded="true" />
+                <element signature="e#5368#5369#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/ShapeSelect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
+            <state relative-caret-position="405">
+              <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,7 +140,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/ShapePaste.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
@@ -130,15 +160,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/interfaces/IDrawShapes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -187,15 +208,15 @@
         <option value="$PROJECT_DIR$/src/controller/ShapeCopy.java" />
         <option value="$PROJECT_DIR$/src/view/gui/ShapeDecorator.java" />
         <option value="$PROJECT_DIR$/src/controller/MouseClickHandler.java" />
-        <option value="$PROJECT_DIR$/src/view/gui/DrawEllipse.java" />
-        <option value="$PROJECT_DIR$/src/view/gui/DrawRectangle.java" />
         <option value="$PROJECT_DIR$/src/controller/DrawShapes.java" />
-        <option value="$PROJECT_DIR$/src/controller/ShapeSelect.java" />
         <option value="$PROJECT_DIR$/src/model/ShapeList.java" />
         <option value="$PROJECT_DIR$/src/model/CommandHistory.java" />
         <option value="$PROJECT_DIR$/src/view/interfaces/IDrawShapes.java" />
-        <option value="$PROJECT_DIR$/src/view/gui/DrawTriangle.java" />
         <option value="$PROJECT_DIR$/src/controller/ShapePaste.java" />
+        <option value="$PROJECT_DIR$/src/view/gui/DrawEllipse.java" />
+        <option value="$PROJECT_DIR$/src/view/gui/DrawRectangle.java" />
+        <option value="$PROJECT_DIR$/src/controller/ShapeSelect.java" />
+        <option value="$PROJECT_DIR$/src/view/gui/DrawTriangle.java" />
       </list>
     </option>
   </component>
@@ -376,12 +397,12 @@
       <workItem from="1563996314332" duration="19632000" />
       <workItem from="1564590104872" duration="29903000" />
       <workItem from="1564667378632" duration="1261000" />
-      <workItem from="1565031611022" duration="4756000" />
+      <workItem from="1565031611022" duration="7389000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121872000" />
+    <option name="totallyTimeSpent" value="124505000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -396,7 +417,7 @@
     <frame x="0" y="23" width="1680" height="949" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18009768" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18009768" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -405,7 +426,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32905483" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19136523" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19136523" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990665" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -490,7 +511,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/view/gui/DrawRectangle.java</url>
-          <line>63</line>
+          <line>64</line>
           <properties />
           <option name="timeStamp" value="100" />
         </line-breakpoint>
@@ -502,13 +523,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/view/gui/DrawRectangle.java</url>
-          <line>60</line>
+          <line>61</line>
           <properties />
           <option name="timeStamp" value="103" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/view/gui/DrawRectangle.java</url>
-          <line>61</line>
+          <line>62</line>
           <properties />
           <option name="timeStamp" value="104" />
         </line-breakpoint>
@@ -812,57 +833,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/gui/DrawEllipse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="58" column="23" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2314#2315#0" expanded="true" />
-            <element signature="e#2343#2344#0" expanded="true" />
-            <element signature="e#2589#2590#0" expanded="true" />
-            <element signature="e#2635#2636#0" expanded="true" />
-            <element signature="e#3125#3126#0" expanded="true" />
-            <element signature="e#3210#3211#0" expanded="true" />
-            <element signature="e#3291#3292#0" expanded="true" />
-            <element signature="e#3375#3376#0" expanded="true" />
-            <element signature="e#3809#3810#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/CommandHistory.java" />
     <entry file="file://$USER_HOME$/Downloads/CommandHistory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/gui/DrawRectangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="63" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/ShapeSelect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/ShapeCopy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -900,30 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/gui/DrawTriangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1725">
-          <caret line="123" column="44" selection-start-line="123" selection-start-column="44" selection-end-line="123" selection-end-column="44" />
-          <folding>
-            <element signature="e#3067#3068#0" expanded="true" />
-            <element signature="e#3096#3097#0" expanded="true" />
-            <element signature="e#3125#3126#0" expanded="true" />
-            <element signature="e#3153#3154#0" expanded="true" />
-            <element signature="e#3189#3190#0" expanded="true" />
-            <element signature="e#3222#3223#0" expanded="true" />
-            <element signature="e#3256#3257#0" expanded="true" />
-            <element signature="e#3287#3288#0" expanded="true" />
-            <element signature="e#3342#3343#0" expanded="true" />
-            <element signature="e#3399#3400#0" expanded="true" />
-            <element signature="e#3874#3875#0" expanded="true" />
-            <element signature="e#3959#3960#0" expanded="true" />
-            <element signature="e#4040#4041#0" expanded="true" />
-            <element signature="e#4124#4125#0" expanded="true" />
-            <element signature="e#4747#4748#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/persistence/ApplicationState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -947,6 +898,84 @@
           <caret line="26" column="120" selection-start-line="26" selection-start-column="120" selection-end-line="26" selection-end-column="120" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/ShapeCopy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/gui/DrawEllipse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="71" column="110" selection-start-line="71" selection-start-column="110" selection-end-line="71" selection-end-column="110" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3070#3071#0" expanded="true" />
+            <element signature="e#3125#3126#0" expanded="true" />
+            <element signature="e#3169#3170#0" expanded="true" />
+            <element signature="e#3210#3211#0" expanded="true" />
+            <element signature="e#3252#3253#0" expanded="true" />
+            <element signature="e#3291#3292#0" expanded="true" />
+            <element signature="e#3341#3342#0" expanded="true" />
+            <element signature="e#3375#3376#0" expanded="true" />
+            <element signature="e#3777#3778#0" expanded="true" />
+            <element signature="e#3809#3810#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/gui/DrawRectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="64" column="110" selection-start-line="64" selection-start-column="110" selection-end-line="64" selection-end-column="110" />
+          <folding>
+            <element signature="e#3190#3191#0" expanded="true" />
+            <element signature="e#3247#3248#0" expanded="true" />
+            <element signature="e#3316#3317#0" expanded="true" />
+            <element signature="e#3381#3382#0" expanded="true" />
+            <element signature="e#3493#3494#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3686#3687#0" expanded="true" />
+            <element signature="e#3767#3768#0" expanded="true" />
+            <element signature="e#3851#3852#0" expanded="true" />
+            <element signature="e#4287#4288#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/ShapeSelect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/gui/DrawTriangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="68" column="88" lean-forward="true" selection-start-line="68" selection-start-column="88" selection-end-line="68" selection-end-column="88" />
+          <folding>
+            <element signature="e#4084#4085#0" expanded="true" />
+            <element signature="e#4141#4142#0" expanded="true" />
+            <element signature="e#4210#4211#0" expanded="true" />
+            <element signature="e#4275#4276#0" expanded="true" />
+            <element signature="e#4387#4388#0" expanded="true" />
+            <element signature="e#4495#4496#0" expanded="true" />
+            <element signature="e#4580#4581#0" expanded="true" />
+            <element signature="e#4661#4662#0" expanded="true" />
+            <element signature="e#4745#4746#0" expanded="true" />
+            <element signature="e#5368#5369#0" expanded="true" />
           </folding>
         </state>
       </provider>

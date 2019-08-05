@@ -65,11 +65,20 @@ public class DrawTriangle implements IDrawShapes {
 
     public void drawOutline(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
-        Stroke stroke = new BasicStroke(3, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 1, new float[]{9}, 0);
-        g2.setStroke(stroke);
-        g.setColor(Color.BLACK);
-        g.drawPolygon(new int[]{adjustedStartPoint.getX() - 5, adjustedEndPoint.getX() + 20, adjustedStartPoint.getX() - 5},
-                new int[]{adjustedStartPoint.getY() - 15, adjustedEndPoint.getY() + 5, adjustedEndPoint.getY() + 5}, 3);
+        if(shadingType.equals(ShapeShadingType.OUTLINE) || shadingType.equals(ShapeShadingType.OUTLINE_AND_FILLED_IN)) {
+            Stroke stroke = new BasicStroke(3, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 1, new float[]{9}, 0);
+            g2.setStroke(stroke);
+            g.setColor(Color.BLACK);
+            g.drawPolygon(new int[]{adjustedStartPoint.getX() - 10, adjustedEndPoint.getX() + 30, adjustedStartPoint.getX() - 10},
+                    new int[]{adjustedStartPoint.getY() - 20, adjustedEndPoint.getY() + 10, adjustedEndPoint.getY() + 10}, 3);
+        }
+        else {
+            Stroke stroke = new BasicStroke(3, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 1, new float[]{9}, 0);
+            g2.setStroke(stroke);
+            g.setColor(Color.BLACK);
+            g.drawPolygon(new int[]{adjustedStartPoint.getX() - 5, adjustedEndPoint.getX() + 20, adjustedStartPoint.getX() - 5},
+                    new int[]{adjustedStartPoint.getY() - 15, adjustedEndPoint.getY() + 5, adjustedEndPoint.getY() + 5}, 3);
+        }
     }
 
     public int getHeight() {

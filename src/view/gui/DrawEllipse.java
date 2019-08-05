@@ -55,13 +55,28 @@ public class DrawEllipse implements IDrawShapes {
             g.fillOval(adjustedStartPoint.getX(), adjustedStartPoint.getY(), width, height);
         }
     }
-
+//
+//    public void drawOutline(Graphics g) {
+//        Graphics2D g3 = (Graphics2D) g;
+//        Stroke stroke = new BasicStroke(3, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 1, new float[]{9}, 0);
+//        g3.setStroke(stroke);
+//        g.setColor(Color.BLACK);
+//        g.drawOval(adjustedStartPoint.getX() - 5, adjustedStartPoint.getY() - 5, width + 10, height + 10);
+//    }
     public void drawOutline(Graphics g) {
-        Graphics2D g3 = (Graphics2D) g;
-        Stroke stroke = new BasicStroke(3, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 1, new float[]{9}, 0);
-        g3.setStroke(stroke);
-        g.setColor(Color.BLACK);
-        g.drawOval(adjustedStartPoint.getX() - 5, adjustedStartPoint.getY() - 5, width + 10, height + 10);
+        Graphics2D g2 = (Graphics2D) g;
+        if(shadingType.equals(ShapeShadingType.OUTLINE) || shadingType.equals(ShapeShadingType.OUTLINE_AND_FILLED_IN)) {
+            Stroke stroke = new BasicStroke(3, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 1, new float[]{9}, 0);
+            g2.setStroke(stroke);
+            g.setColor(Color.BLACK);
+            g.drawOval(adjustedStartPoint.getX() - 10, adjustedStartPoint.getY() - 10, width + 20, height + 20);
+        }
+        else {
+            Stroke stroke = new BasicStroke(3, BasicStroke.CAP_BUTT, BasicStroke.JOIN_BEVEL, 1, new float[]{9}, 0);
+            g2.setStroke(stroke);
+            g.setColor(Color.BLACK);
+            g.drawOval(adjustedStartPoint.getX() - 5, adjustedStartPoint.getY() - 5, width + 10, height + 10);
+        }
     }
 
     public int getHeight() {
