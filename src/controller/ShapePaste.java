@@ -2,17 +2,16 @@ package controller;
 
 import model.ShapeConfig;
 import model.ShapeList;
+import model.ShapeType;
 import model.interfaces.IApplicationState;
 import view.interfaces.IDrawShapes;
-import java.util.ArrayList;
 
 
 public class ShapePaste implements ICommand {
     private IApplicationState applicationState;
     private ShapeList shapeList;
-    private IDrawShapes copiedShape;
+    private IDrawShapes shapes;
     private ShapeConfig shapeConfig;
-    private final ArrayList<IDrawShapes> temp = new ArrayList<>();
 
     public ShapePaste(IApplicationState applicationState, ShapeList shapeList, ShapeConfig shapeConfig) {
         this.applicationState = applicationState;
@@ -22,11 +21,12 @@ public class ShapePaste implements ICommand {
 
     public void run() {
         for(IDrawShapes shape: shapeList.getCopiedShapesList()) {
-            copiedShape = shape;
-            copiedShape.setAdjustedStartPoint(shape.getAdjustedStartPoint().getX() + 80, shape.getAdjustedStartPoint().getY());
-            copiedShape.setAdjustedStartPoint(shape.getAdjustedStartPoint().getX(), shape.getAdjustedStartPoint().getY() + 80);
-            ShapeCreate newShape = new ShapeCreate(applicationState, shapeList, copiedShape.getShapeConfiguration());
-            shapeList.add(newShape.shapeFactory.createShape(copiedShape.getShapeConfiguration()));
+            ShapeCreate newShape = new ShapeCreate(applicationState, shapeList, shape.getShapeConfiguration());
+            shapes = newShape.shapeFactory.createShape(shape.getShapeConfiguration());
+            shapes.setAdjustedStartPoint(shape.getAdjustedStartPoint().getX() + 80, shape.getAdjustedStartPoint().getY() + 80);
+            shapes.setAdjustedEndPoint(shape.getAdjustedEndPoint().getX() + 80, shape.getAdjustedEndPoint().getY() + 80);
+            shapeList.add(shapes);
         }
+
     }
 }
