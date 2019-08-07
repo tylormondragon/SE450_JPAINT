@@ -25,7 +25,6 @@ public class ShapeSelect implements ICommand {
     }
 
     public void run() {
-        //todo: why is my
         shapeList.clearSelectedList();
         shapeConfig = applicationState.getCurrentShapeConfig();
         for (IDrawShapes shape : shapeList.getShapesList()) {

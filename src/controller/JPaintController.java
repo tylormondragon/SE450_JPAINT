@@ -31,10 +31,11 @@ public class JPaintController implements IJPaintController {
         uiModule.addEvent(EventName.CHOOSE_SECONDARY_COLOR, () -> applicationState.setActiveSecondaryColor());
         uiModule.addEvent(EventName.CHOOSE_SHADING_TYPE, () -> applicationState.setActiveShadingType());
         uiModule.addEvent(EventName.CHOOSE_START_POINT_ENDPOINT_MODE, () -> applicationState.setActiveStartAndEndPointMode());
+        uiModule.addEvent(EventName.UNDO, () -> new UndoCommand().run());
+        uiModule.addEvent(EventName.REDO, () -> new RedoCommand().run());
         uiModule.addEvent(EventName.COPY, () -> new ShapeCopy(applicationState, shapeList, shapeConfig).run());
         uiModule.addEvent(EventName.PASTE, () -> new ShapePaste(applicationState, shapeList, shapeConfig).run());
         uiModule.addEvent(EventName.DELETE, () -> new ShapeDelete(applicationState, shapeList, shapeConfig).run());
-        uiModule.addEvent(EventName.UNDO, () -> new UndoCommand());
-        uiModule.addEvent(EventName.REDO, () -> new RedoCommand());
+
     }
 }

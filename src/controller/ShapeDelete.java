@@ -12,6 +12,7 @@ public class ShapeDelete implements ICommand, IUndoRedo {
     private IApplicationState applicationState;
     private ShapeList shapeList;
     private ShapeConfig shapeConfig;
+    private ArrayList<IDrawShapes> selectedShapes;
 
     public ShapeDelete(IApplicationState applicationState, ShapeList shapeList, ShapeConfig shapeConfig) {
         this.applicationState = applicationState;
@@ -21,7 +22,9 @@ public class ShapeDelete implements ICommand, IUndoRedo {
 
     @Override
     public void run() {
-        for(IDrawShapes shape: shapeList.getSelectedShapesList()) {
+        selectedShapes = shapeList.getSelectedShapesList();
+        System.out.println("Selected Shapes Deleted");
+        for(IDrawShapes shape: selectedShapes) {
             shapeList.remove(shape);
             System.out.println(shapeList.getShapesList().size());
         }
@@ -30,14 +33,16 @@ public class ShapeDelete implements ICommand, IUndoRedo {
 
     @Override
     public void undo() {
-        for(IDrawShapes shape: shapeList.getSelectedShapesList()) {
+        System.out.println("Undo Delete Executed");
+        for(IDrawShapes shape: selectedShapes) {
             shapeList.add(shape);
         }
     }
 
     @Override
     public void redo() {
-        for(IDrawShapes shape: shapeList.getSelectedShapesList() ) {
+        System.out.println("Redo Delete Executed");
+        for(IDrawShapes shape: selectedShapes) {
             shapeList.remove(shape);
         }
     }
