@@ -18,8 +18,6 @@ public class Shape {
     private controller.Point startPoint;
     private Point endPoint;
     private ShapeType shapeType;
-    private Graphics g;
-    private Graphics2D g2;
     private IShapeStrategy strategy;
 
 
@@ -35,8 +33,6 @@ public class Shape {
         this.startPoint = shapeConfig.getStartPoint();
         this.endPoint = shapeConfig.getEndPoint();
         this.shapeType = shapeConfig.getShapeType();
-        this.g = shapeConfig.getGraphics();
-        this.g2 = shapeConfig.getGraphics2D();
         this.strategy = shapeStrategy;
     }
 
