@@ -2,6 +2,8 @@ package model;
 
 import controller.Point;
 
+import java.awt.*;
+
 public class ShapeConfig {
     private ShapeColor primaryShapeColor;
     private ShapeColor secondaryShapeColor;
@@ -13,6 +15,8 @@ public class ShapeConfig {
     private Point adjustedEndPoint;
     private int width;
     private int height;
+    private Graphics2D g2;
+    private Graphics g;
 
     //Setter Methods for shape configuration
     public void setPrimaryShapeColor(ShapeColor primaryShapeColor) {
@@ -106,5 +110,13 @@ public class ShapeConfig {
         Point adjustedStart = getAdjustedStartPoint();
         Point adjustedEnd = getAdjustedEndPoint();
         return adjustedEnd.getY() - adjustedStart.getY();
+    }
+
+    public Graphics getGraphics() {
+        return g;
+    }
+
+    public Graphics2D getGraphics2D() {
+        return g2;
     }
 }
