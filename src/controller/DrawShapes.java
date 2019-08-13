@@ -2,12 +2,13 @@ package controller;
 
 import model.ShapeList;
 import model.interfaces.IApplicationState;
+import model.interfaces.IUndoRedo;
 import view.interfaces.IDrawShapes;
 import view.interfaces.PaintCanvasBase;
 
 import java.awt.*;
 
-public class DrawShapes {
+public class DrawShapes implements IUndoRedo {
     private final PaintCanvasBase paintCanvas;
     private final IApplicationState appState;
 
@@ -25,9 +26,14 @@ public class DrawShapes {
                 shape.drawOutline(g);
             }
         }
+        CommandHistory.add(this);
     }
 
     public void redo() {
+        shapeL
+    }
+
+    public void undo() {
 
     }
 }
