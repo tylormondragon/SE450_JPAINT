@@ -30,7 +30,7 @@ public class DrawShapes implements IUndoRedo {
     }
 
     public void redo() {
-        shapeL
+
     }
 
     public void undo() {
