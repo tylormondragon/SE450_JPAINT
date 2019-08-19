@@ -22,6 +22,9 @@ public interface IDrawShapes {
 
     void addY(int dy);
 
+    void lessX(int dx);
+    void lessY(int dy);
+
     Point getAdjustedStartPoint();
 
     Point getAdjustedEndPoint();

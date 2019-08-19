@@ -29,10 +29,12 @@ public class DrawShapes implements IUndoRedo {
         CommandHistory.add(this);
     }
 
+    @Override
     public void redo() {
 
     }
 
+    @Override
     public void undo() {
 
     }

@@ -8,6 +8,7 @@ public class ShapeList {
     private final ArrayList<IDrawShapes> shapesList;
     private final ArrayList<IDrawShapes> selectedShapesList;
     private final ArrayList<IDrawShapes> copiedShapesList;
+    private final ArrayList<IDrawShapes> tempShapeList;
     private DrawShapes drawShapes;
 
     public ShapeList(DrawShapes drawShapes) {
@@ -15,6 +16,7 @@ public class ShapeList {
         shapesList = new ArrayList<>();
         selectedShapesList = new ArrayList<>();
         copiedShapesList = new ArrayList<>();
+        tempShapeList = new ArrayList<>();
     }
 
     //Method to add a shape to the shape list
@@ -40,6 +42,11 @@ public class ShapeList {
         drawShapes.draw(this);
     }
 
+    public void addTempShapeList(IDrawShapes shape) {
+        tempShapeList.add(shape);
+        drawShapes.draw(this);
+    }
+
     //Method to retrieve the shape list
     public ArrayList<IDrawShapes> getShapesList() {
         return shapesList;
@@ -48,6 +55,8 @@ public class ShapeList {
     public ArrayList<IDrawShapes> getSelectedShapesList() {
         return selectedShapesList;
     }
+
+    public ArrayList<IDrawShapes> getTempShapeList() {return selectedShapesList;}
 
     public void addCopiedList(IDrawShapes shape) {copiedShapesList.add(shape); }
 

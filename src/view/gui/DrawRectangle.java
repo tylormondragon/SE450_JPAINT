@@ -121,6 +121,18 @@ public class DrawRectangle implements IDrawShapes {
     }
 
     @Override
+    public void lessX(int dx) {
+        adjustedStartPoint.setX(adjustedStartPoint.getX() - dx);
+        adjustedEndPoint.setX(adjustedEndPoint.getX() - dx);
+    }
+
+    @Override
+    public void lessY(int dy) {
+        adjustedStartPoint.setY(adjustedStartPoint.getY() - dy);
+        adjustedEndPoint.setY(adjustedEndPoint.getY() - dy);
+    }
+
+    @Override
     public String toString() {
         return "Rectangle";
     }

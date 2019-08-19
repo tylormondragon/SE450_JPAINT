@@ -7,6 +7,8 @@ import model.interfaces.IApplicationState;
 import model.interfaces.IUndoRedo;
 import view.interfaces.IDrawShapes;
 
+import java.util.ArrayList;
+
 
 public class ShapePaste implements ICommand, IUndoRedo {
     private IApplicationState applicationState;
@@ -14,6 +16,7 @@ public class ShapePaste implements ICommand, IUndoRedo {
     private IDrawShapes shapes;
     private IDrawShapes oldShape;
     private ShapeConfig shapeConfig;
+    private ArrayList<IDrawShapes> tempList;
 
     public ShapePaste(IApplicationState applicationState, ShapeList shapeList, ShapeConfig shapeConfig) {
         this.applicationState = applicationState;
@@ -22,6 +25,7 @@ public class ShapePaste implements ICommand, IUndoRedo {
     }
 
     public void run() {
+        tempList = new ArrayList<>();
         for(IDrawShapes shape: shapeList.getCopiedShapesList()) {
             oldShape = shape;
             ShapeCreate newShape = new ShapeCreate(applicationState, shapeList, shape.getShapeConfiguration());
@@ -29,12 +33,15 @@ public class ShapePaste implements ICommand, IUndoRedo {
             shapes.setAdjustedStartPoint(shape.getAdjustedStartPoint().getX() + 80, shape.getAdjustedStartPoint().getY() + 80);
             shapes.setAdjustedEndPoint(shape.getAdjustedEndPoint().getX() + 80, shape.getAdjustedEndPoint().getY() + 80);
             shapeList.add(shapes);
+            tempList.add(shapes);
         }
         CommandHistory.add(this);
     }
 
     public void redo() {
-        shapeList.add(shapes);
+        for(IDrawShapes shape: tempList) {
+            shapeList.add(shape);
+        }
     }
 
     public void undo() {
